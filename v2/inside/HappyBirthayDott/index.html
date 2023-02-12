@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - New Year Countdown Using JavaScript</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="countdown timer that displays the number of days, hours, minutes, and seconds until the New Year."><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <h1 class="text">Дней до моего дня рождения</h1>
+  <div id="countdown">
+    <div class="circle" style="--clr: #ff4c4c;">
+      <svg>
+        <circle cx="70" cy="70" r="70"></circle>
+        <circle cx="70" cy="70" r="70" id="dd"></circle>
+      </svg>
+      <div id="days">000<br><span>Дней</span></div>
+    </div>
+
+    <div class="circle" style="--clr: #ffd700;">
+      <svg>
+        <circle cx="70" cy="70" r="70"></circle>
+        <circle cx="70" cy="70" r="70" id="hh"></circle>
+      </svg>
+      <div id="hours">00<br><span>Часов</span></div>
+    </div>
+
+    <div class="circle" style="--clr: #ffc0cb;">
+      <svg>
+        <circle cx="70" cy="70" r="70"></circle>
+        <circle cx="70" cy="70" r="70" id="mm"></circle>
+      </svg>
+      <div id="minutes">00<br><span>Минут</span></div>
+    </div>
+
+    <div class="circle" style="--clr: #b0e0e6;">
+      <svg>
+        <circle cx="70" cy="70" r="70"></circle>
+        <circle cx="70" cy="70" r="70" id="ss"></circle>
+      </svg>
+      <div id="seconds">00<br><span>Секунд</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- <canvas id="snowflakes"></canvas> -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

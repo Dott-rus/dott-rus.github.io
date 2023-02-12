@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Dott</title> 
+	<meta name="description" content="cursedplayer">
+    <link rel="stylesheet" href="css/main.css" />
+	<link rel="shortcut icon" href="img/2.ico" type="image/ico">
+
+  <style>
+.center {
+  text-align: center;
+}
+
+  </style>
+
+</head>
+  <body>
+    <div class="preloader">
+      <div style="PreloaderStyle" class="preloader-circle"></div>
+    </div>
+
+    <div id="asif-page">
+      <div class="wrapper">
+        <div class="background">
+          <video preload muted ref="background-video" id="background-video">
+            <source src="videos/Righthere.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="asif-page-copyright" :style="CopyRightStyle">
+          {{ copyrightText }}
+        </div>
+
+
+        <div class="container">
+          <div class="asif-page-wrapper">
+            <div class="asif-page-info">
+              <div
+                class="asif-page-info-play"
+                :class=" { 'is-playing': isPlaying }"
+                :style="PlayButtonStyle"
+                @click="startPlay"
+              >
+                Play
+              </div>
+              <div class="asif-page-info-logo"></div>
+              <div
+                ref="title"
+                :class="{ 'title-visible': titleVisible }"
+                class="asif-page-info-title"
+                :style="TitleStyle"
+              >
+                {{ title }}
+              </div>
+              <div
+                class="asif-page-info-social"
+                :class="{ 'social-visible': titleVisible }"
+              >
+                <a
+                  v-for="(item, key) in social"
+                  :href="getSocialLink(key, item)"
+                  target="_blank"
+                  class="asif-page-info-social-item"
+                >
+                  <span :style="SocialStyle" :class="'icon-' + key"></span>
+                
+                </a>
+                
+              </div>
+              <iframe
+                width="1300"
+                height="300"
+                frameborder="no" 
+                src="inside\HappyBirthayDott"></iframe>
+              
+
+            </div> 
+          </div>
+        
+        </div>
+      </div>
+    </div>
+    
+
+
+
+  <script src="js/block.js"></script>
+  <script src="js/window.js"></script>
+	<script src="js/vue.js"></script>
+  <script src="js/config.js"></script>
+	<script src="js/common.js"></script>
+	<script src="inside\HappyBirthayDott\script.js"></script>
+  </body>
+</html>
