@@ -16,7 +16,7 @@ let wishDays = 10;
 
 let x = setInterval(function () {
   let currentYear = new Date().getFullYear();
-  let newYear = new Date(`Feb 19, ${currentYear} 00:00:00`);
+  let newYear = new Date(`Feb 19, ${currentYear} 06:40:00`);
   let now = new Date().getTime();
   let distance = newYear - now;
 
