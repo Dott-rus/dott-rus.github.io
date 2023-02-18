@@ -10,14 +10,19 @@
 	<link rel="shortcut icon" href="img/2.ico" type="image/ico">
 
   <style>
-.center {
+.centerBlack {
+  text-align: center;
+  background-color: black;
+}
+
+.center{
   text-align: center;
 }
 
   </style>
 
 </head>
-  <body>
+  <body bgcolor="#000">
     <div class="preloader">
       <div style="PreloaderStyle" class="preloader-circle"></div>
     </div>
@@ -50,14 +55,17 @@
                 ref="title"
                 :class="{ 'title-visible': titleVisible }"
                 class="asif-page-info-title"
-                :style="TitleStyle"
-              >
+                :style="TitleStyle">
                 {{ title }}
               </div>
+              
+              
+              
               <div
                 class="asif-page-info-social"
                 :class="{ 'social-visible': titleVisible }"
               >
+ 
                 <a
                   v-for="(item, key) in social"
                   :href="getSocialLink(key, item)"
@@ -69,22 +77,27 @@
                 </a>
                 
               </div>
-              <div style="text-align: center;">
-              <iframe
-                height="300"
-                frameborder="no"
-                align="middle" 
-                src="inside\HappyBirthayDott"></iframe>
-              </div>
+              
 
             </div> 
           </div>
-        
+          <h1 class="center">
+            ⌄⌄⌄
+            <br>
+            ⌄⌄⌄
+          </h1>
         </div>
+        
       </div>
     </div>
     
-
+    <div class='centerBlack'>
+      <iframe
+        height="300"
+        frameborder="no"
+        align="middle" 
+        src="inside\HappyBirthayDott"></iframe>
+      </div>
 
 
   <script src="js/block.js"></script>
@@ -92,7 +105,6 @@
   <script src="js/vue.js"></script>
   <script src="js/config.js"></script>
   <script src="js/common.js"></script>
-  <script src="inside\HappyBirthayDott\script.js"></script>
-  <script src="js/index.js"></script>
+  <!--<script src="js/index.js"></script>-->
   </body>
 </html>
