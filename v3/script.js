@@ -48,3 +48,14 @@ for (const star of document.getElementsByClassName("magic-star")) {
     setIntervall(() => animate(star), 1000);
   }, index++ * (intervall / 3));
 }
+
+
+
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+
