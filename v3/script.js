@@ -51,11 +51,7 @@ for (const star of document.getElementsByClassName("magic-star")) {
 
 
 
-function copyToClipboard(element) {
-  var $temp = $("<input>");
-  $("body").append($temp);
-  $temp.val($(element).text()).select();
-  document.execCommand("copy");
-  $temp.remove();
+function copyToClipboard(){
+  const text = 'dott#9569'
+  navigator.clipboard.writeText(text);
 }
-
