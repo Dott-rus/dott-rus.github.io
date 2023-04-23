@@ -74,6 +74,8 @@ a:hover{
 
 a:link { text-decoration: none; color:#ffffff; }
 
+a:linkButton { text-decoration: none; foreground:#ffffff; background:#000000 }
+
 a:visited { text-decoration: none; color:#ffffff; }
 
 a:hover { text-decoration: none; color: #636363; }
