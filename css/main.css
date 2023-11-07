@@ -1,0 +1,71 @@
+body{
+  background: #000;
+  @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+}
+
+.text{
+  color: #fff;
+}
+
+
+.name{
+  text-align: center;
+  text-transform: lowercase;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 900;
+  font-size: 99pt;
+  padding-top: 50%;
+}
+
+.response{
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+
+.console{
+  border: solid;
+  border-color: rgb(255, 255, 255);
+  border-width: 2px;
+  
+}
+
+
+.rainbowName {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  -webkit-animation: name 5s infinite; 
+}
+@-webkit-keyframes name{
+  0%{color: rgb(255, 255, 255);}  
+  10%{color: rgb(43, 43, 43);} 
+  20%{color: rgb(255, 255, 255);}
+  30%{color: rgb(255, 255, 255);}
+  40%{color: rgb(255, 255, 255);}
+  50%{color: rgb(43, 43, 43);}
+  60%{color: rgb(255, 255, 255);}
+  70%{color: rgb(255, 255, 255);}
+  80%{color: rgb(255, 255, 255);}
+  90%{color: rgb(54, 54, 54);}
+  100%{color: rgb(255, 255, 255);}
+}
+.rainbowDiscord {
+  font-size: 1.5rem;
+  
+  -webkit-animation: Discord 5s infinite; 
+}
+.rainbowDiscord2 {
+  font-size: 1.5rem;
+  
+  -webkit-animation: Discord 20s infinite; 
+}
+
+@-webkit-keyframes Discord{
+  0%{color: rgb(114, 137, 218);}  
+  32%{color: rgb(255, 255, 255);} 
+  48%{color: rgb(153, 170, 181);}
+  64%{color: rgb(114, 137, 218);}
+  80%{color: rgb(35, 39, 42);}
+  96%{color: rgb(255, 255, 255);}
+  100%{color:rgb(114, 137, 218)}
+}

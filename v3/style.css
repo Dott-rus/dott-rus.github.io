@@ -1,0 +1,84 @@
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: black;
+  margin: 0rem;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: "Space Mono", monospace;
+  font-size: clamp(3rem, 10vw, 10rem);
+  color: white;
+  padding: 0rem clamp(1rem, 2vw, 3rem);
+  border-radius: clamp(0.4rem, 0.75vw, 1rem);
+}
+
+h1:hover {
+  background-color: white;
+  color: black;
+}
+
+.links {
+  color: #fff;
+  font-family: "Space Mono", monospace;
+  
+}
+
+:root {
+  --purple: rgb(123, 31, 162);
+  --violet: rgb(103, 58, 183);
+  --pink: rgb(244, 143, 177);
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes scale {
+  from,
+  to {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.link{
+  font-weight: bold;
+  text-align: center;
+}
+
+a:hover{
+  
+}
+
+a:link { text-decoration: none; color:#ffffff; }
+
+.linkButton {font-weight: bold;
+  text-align: center; text-decoration: none; color:#ffffff; background-color:#000000; border: none; }
+
+a:visited { text-decoration: none; color:#ffffff; }
+
+a:hover { text-decoration: none; color: #636363; }
+
+a:active { text-decoration: none; color:#ffffff; }
