@@ -1,7 +1,12 @@
 body{
+  padding: 0px;
   background: #000;
+  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+  font-family: 'Nunito Sans', sans-serif;
 }
+
+
 
 .text{
   color: #fff;
@@ -14,7 +19,7 @@ body{
   font-family: 'Source Code Pro', monospace;
   font-weight: 900;
   font-size: 99pt;
-  padding-top: 50%;
+  padding-top: 50px;
 }
 
 .response{
@@ -27,6 +32,8 @@ body{
   border: solid;
   border-color: rgb(255, 255, 255);
   border-width: 2px;
+  max-width: 1000px;
+  margin: auto;
   
 }
 
@@ -68,4 +75,8 @@ body{
   80%{color: rgb(35, 39, 42);}
   96%{color: rgb(255, 255, 255);}
   100%{color:rgb(114, 137, 218)}
+}
+
+.green{
+  color: chartreuse;
 }
