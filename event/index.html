@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+
+
+    document.getElementById('username').textContent = "Неизвесный?";
+  const searchParams = new URLSearchParams(location.search);
+  const name = searchParams.get('name');
+
+  if (name != null) {
+    document.getElementById('username').textContent = name;
+  }
+
+  if (name == null) {
+    document.body.innerHTML = '';
+  }
+
+}, false);
+    </script>
+
+
+    <meta charset="UTF-8"/>
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="hi font">Привет,<div id="username"></div></div>
+    <div class="sep rainbow">-----</div>
+<br>
+<br>
+    <div class="font big desc">Это твоё приглашение на мой 
+    <asd style="font-size: 40%;">(прошедший)</asd> день рождения.</div>
+    <br>
+    <div ОТВЕТЫ НА ВОПРОСЫ>
+
+    <div class="desc font q rainbow" style="font-weight: bold;">Где?</div>
+    <div class="ans font desc">Это будет на <a style="color: antiquewhite;" href="geo:59.2157517,39.9002073">Зосимовской 47</a></div>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2042.0142557375843!2d39.898526977375276!3d59.21577672010468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46ae982fdaf5a66f%3A0x33fa154940bdb442!2z0KHQtdC80LXQudC90YvQuSDRgNC10YHRgtC-0YDQsNC9INCf0LjRhtGG0LDQpNCw0LHRgNC40LrQsA!5e0!3m2!1sru!2sru!4v1708706400863!5m2!1sru!2sru"
+    width="80%" height="600" 
+    style="border:0; " allowfullscreen="" loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade" class="desc">
+    </iframe>
+
+    </div>
+<br>
+<br>
+<br>
+<div ХУЙНЯ ЕБАНАЯ ДЛЯ ДО ИВЕНТА>
+<div class="font starting">Начало через</div>
+<asd id="demo" class="font starting" style="padding-left: 38%; padding-top: 0; padding-right: 0;">00:00:00</asd>
+</div>  
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Feb 24, 2024 13:00:00").getTime();
+        
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+          // Get today's date and time
+          var now = new Date().getTime();
+        
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+        
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+          // Display the result in the element with id="demo"
+          document.getElementById("demo").innerHTML =hours + ":"
+          + minutes + ":" + seconds;
+        
+          // If the count down is finished, write some text
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "Уже всё, началось!";
+          }
+        }, 1000);
+    </script>
+</body>
+</html>
