@@ -1,0 +1,69 @@
+:root {
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+    background-color: black;
+    @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+}
+
+
+.font {
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+    
+}
+
+.big {
+    font-size:400%;
+}
+
+.q {
+    font-size:400%;
+    font-weight: bolder;
+}
+
+.hi {
+    padding-top: 20%;
+    font-size: 500%;
+    text-align: center;
+}
+
+.sep {
+    font-family: "Kode Mono", monospace;
+    color: aliceblue;
+    text-align: center;
+    font-size: 120px;
+}
+
+.rainbow {
+
+   animation: rainbow 20s infinite; 
+ }
+ 
+ /* Standar Syntax */
+ @keyframes rainbow{
+     0%{color: orange;}	
+   10%{color: purple;}	
+     20%{color: red;}
+   30%{color: CadetBlue;}
+     40%{color: yellow;}
+   50%{color: coral;}
+     60%{color: green;}
+   70%{color: cyan;}
+   80%{color: DeepPink;}
+   90%{color: DodgerBlue;}
+     100%{color: orange;}
+ }
+
+
+.desc{
+    text-align: left;
+    padding-left: 5%;
+}
+
+
+.starting{
+    font-size: 400%;
+    text-align: center;
+    
+}
