@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личная страница Dott</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1 id="greeting">Привет, я Dott</h1>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdown()">Lang <span>&#9662;</span></button>
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="#" onclick="setLocale('ru')"><img
+                            src="
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAiklEQVQ4EWNgGBLg/fv3Au/fvzegBMM9+vr1a4d3796df/fu3X8K8f03b94EMLx7924/hQYhO+Q+yEBkAYrZ1DcwrnjVFWpiBiWHnv/UxCPRQG279ovUxAznFDT+UxPTxMD71HOh+nmG0woaDucU1N9Tbqj6+7MKGgnwUgdkMCX4vIKCANywQc0AACNMBdjYed4iAAAAAElFTkSuQmCC"
+                            alt="Русский">RUS</a>
+                    <a href="#" onclick="setLocale('en')">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABG0lEQVQ4EWNgGBLAwaFAwMqqwAAfXq9qaoAPwz1qY5PjYGOdd97GOu8/Przd0PEDIbxexcSBwcY6d39r61KwYZUVs/8nJnTC2SALQGIg+t27d8Tg9wwwV+XmTPrv4V4ONjAkpAHMnjRxHdzVm5RN/hODwQbCNIJcBzIUZCDMZSCLQJa+ff36MTEY7kKQASCDQIbCDIa5GmTgkYSc88RgsIEwA0A0zFCYt2EufHLyzGFiMNhAkGaQK0DehWGYGIy+OnP+AWIwQ1Zm/wFiMDGGgdQwvLh6/QQ1McOBgNgb1MQM796+/UBNzEBMYiVFDcO7d+/uE5mtiMt6B2JSbHc5+D2mFO9xDLh6NK88Al7qgEoKirCCgQDcsEHNAACwfwy7CxhuYQAAAABJRU5ErkJggg=="
+                            alt="English">ENG</a>
+                    <!-- Можно добавить другие языки -->
+                </div>
+            </div>
+        </div> <!-- Закрытие dropdown -->
+        </div> <!-- Закрытие header-container -->
+    </header>
+
+
+    <section>
+        <h2 id="about-title">Обо мне</h2>
+        <p id="about-text">Я разработчик с интересом к технологиям, манге и созданию крутых проектов. Постоянно ищу
+            новые способы улучшить свои навыки и сделать мир немного интереснее.</p>
+    </section>
+
+    <section>
+        <h2 id="projects-title">Проекты</h2>
+        <div class="projects" id="projects-container">
+            <div class="project-card">
+                <a href="https://project1.com" target="_blank">
+                    <img class="preview" src="Project1.png"></img>
+
+                    <h3 id="project1-title">Включи JS</h3>
+                    <p id="project1-description">Включи JS</p>
+                </a>
+            </div>
+            <div class="project-card">
+                
+                <a href="https://project2.com" target="_blank">
+
+                    <img class="preview" src="Project2.png"></img>
+
+                    <h3 id="project2-title">Включи JS</h3>
+                    <p id="project2-description">Включи JS</p>
+                </a>
+            </div>
+            <div class="project-card">
+                <!-- <a href="" target="_blank"> -->
+
+                    <img class="preview" src="https://osu.ppy.sh/images/layout/avatar-guest@2x.png"></img>
+                <h3 id="project3-title">Включи JS</h3>
+                <p id="project3-description">Включи JS</p>
+                </a>
+            </div>
+
+
+        <!-- MORE ADD HERE -->
+
+
+
+
+
+
+        </div>
+    </section>
+
+    <footer>
+        <h2 id="contacts-title">Контакты</h2>
+        <div class="contacts">
+            <a href="https://github.com/dott-rus" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:dott@example.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://t.me/dott" target="_blank"><i class="fas fa-paper-plane"></i></a>
+        </div>
+    </footer>
+
+    <!-- Подключение иконок через cdnjs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="translations.js"></script>
+    <script>
+
+       
+        function setLocale(locale) {
+            localStorage.setItem('locale', locale);
+            updateContent(locale);
+        }
+        
+        //GOD FUCK THIS SHIT
+        //ПРОСТО ПИЗДЕЦ ЧТО ЭТО ЗА ДЕРЬМО
+
+        //GOD BLESS PERPLEXITY
+        //СПАСИБО PERPLEXITY
+        function updateContent(locale) {
+    document.getElementById('greeting').textContent = translations[locale].greeting;
+    document.getElementById('about-title').textContent = translations[locale].aboutTitle;
+    document.getElementById('about-text').textContent = translations[locale].aboutText;
+    document.getElementById('projects-title').textContent = translations[locale].projectsTitle;
+
+    // Заменяем \n на <br> для описания проектов
+    document.getElementById('project1-title').textContent = translations[locale].project1.title;
+    document.getElementById('project1-description').innerHTML = translations[locale].project1.description.replace(/\n/g, '<br>');
+    
+    document.getElementById('project2-title').textContent = translations[locale].project2.title;
+    document.getElementById('project2-description').innerHTML = translations[locale].project2.description.replace(/\n/g, '<br>');
+    
+    document.getElementById('project3-title').textContent = translations[locale].project3.title;
+    document.getElementById('project3-description').innerHTML = translations[locale].project3.description.replace(/\n/g, '<br>');
+    
+    document.getElementById('contacts-title').textContent = translations[locale].contactsTitle;
+    //
+    //
+    //
+}
+
+        // Dropdown toggle logic
+        function toggleDropdown() {
+            document.getElementById("dropdownContent").classList.toggle("show");
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+
+        // Load saved locale on page load
+        window.onload = () => {
+            const savedLocale = localStorage.getItem('locale') || 'ru'; // Default to Russian
+            updateContent(savedLocale);
+        };
+    </script>
+</body>
+
+</html>
