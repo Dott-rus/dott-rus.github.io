@@ -40,7 +40,7 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAiklEQVQ4EW
         <h2 id="projects-title">Проекты</h2>
         <div class="projects" id="projects-container">
             <div class="project-card">
-                <a href="https://project1.com" target="_blank">
+                <a href="https://github.com/Dott-rus/MusicPlayerPythonEdition" target="_blank">
                     <img class="preview" src="Project1.png"></img>
 
                     <h3 id="project1-title">Включи JS</h3>
@@ -48,8 +48,8 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAiklEQVQ4EW
                 </a>
             </div>
             <div class="project-card">
-                
-                <a href="https://project2.com" target="_blank">
+
+                <a href="https://github.com/Dott-rus/TicTacToePythonEdition" target="_blank">
 
                     <img class="preview" src="Project2.png"></img>
 
@@ -60,14 +60,14 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAiklEQVQ4EW
             <div class="project-card">
                 <!-- <a href="" target="_blank"> -->
 
-                    <img class="preview" src="https://osu.ppy.sh/images/layout/avatar-guest@2x.png"></img>
+                <img class="preview" src="https://osu.ppy.sh/images/layout/avatar-guest@2x.png"></img>
                 <h3 id="project3-title">Включи JS</h3>
                 <p id="project3-description">Включи JS</p>
                 </a>
             </div>
 
 
-        <!-- MORE ADD HERE -->
+            <!-- MORE ADD HERE -->
 
 
 
@@ -91,38 +91,38 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAiklEQVQ4EW
     <script src="translations.js"></script>
     <script>
 
-       
+
         function setLocale(locale) {
             localStorage.setItem('locale', locale);
             updateContent(locale);
         }
-        
+
         //GOD FUCK THIS SHIT
         //ПРОСТО ПИЗДЕЦ ЧТО ЭТО ЗА ДЕРЬМО
 
         //GOD BLESS PERPLEXITY
         //СПАСИБО PERPLEXITY
         function updateContent(locale) {
-    document.getElementById('greeting').textContent = translations[locale].greeting;
-    document.getElementById('about-title').textContent = translations[locale].aboutTitle;
-    document.getElementById('about-text').textContent = translations[locale].aboutText;
-    document.getElementById('projects-title').textContent = translations[locale].projectsTitle;
+            document.getElementById('greeting').textContent = translations[locale].greeting;
+            document.getElementById('about-title').textContent = translations[locale].aboutTitle;
+            document.getElementById('about-text').textContent = translations[locale].aboutText;
+            document.getElementById('projects-title').textContent = translations[locale].projectsTitle;
 
-    // Заменяем \n на <br> для описания проектов
-    document.getElementById('project1-title').textContent = translations[locale].project1.title;
-    document.getElementById('project1-description').innerHTML = translations[locale].project1.description.replace(/\n/g, '<br>');
-    
-    document.getElementById('project2-title').textContent = translations[locale].project2.title;
-    document.getElementById('project2-description').innerHTML = translations[locale].project2.description.replace(/\n/g, '<br>');
-    
-    document.getElementById('project3-title').textContent = translations[locale].project3.title;
-    document.getElementById('project3-description').innerHTML = translations[locale].project3.description.replace(/\n/g, '<br>');
-    
-    document.getElementById('contacts-title').textContent = translations[locale].contactsTitle;
-    //
-    //
-    //
-}
+            // Заменяем \n на <br> для описания проектов
+            document.getElementById('project1-title').textContent = translations[locale].project1.title;
+            document.getElementById('project1-description').innerHTML = translations[locale].project1.description.replace(/\n/g, '<br>');
+
+            document.getElementById('project2-title').textContent = translations[locale].project2.title;
+            document.getElementById('project2-description').innerHTML = translations[locale].project2.description.replace(/\n/g, '<br>');
+
+            document.getElementById('project3-title').textContent = translations[locale].project3.title;
+            document.getElementById('project3-description').innerHTML = translations[locale].project3.description.replace(/\n/g, '<br>');
+
+            document.getElementById('contacts-title').textContent = translations[locale].contactsTitle;
+            //
+            //
+            //
+        }
 
         // Dropdown toggle logic
         function toggleDropdown() {
