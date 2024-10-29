@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подсчет патронов в Buckshot Roulette</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Подсчет патронов в Buckshot Roulette</h1>
+        <div class="ammo-counter">
+            <div>
+                <h2>Живые патроны: <span id="live-count">0</span></h2>
+                <button onclick="addLive()">Добавить живой</button>
+                <button onclick="removeLive()">Убрать живой</button>
+            </div>
+            <div>
+                <h2>Пустые патроны: <span id="blank-count">0</span></h2>
+                <button onclick="addBlank()">Добавить пустой</button>
+                <button onclick="removeBlank()">Убрать пустой</button>
+            </div>
+        </div>
+        <div class="prediction">
+            <h2>Новое предсказание:</h2>
+            <input type="number" id="prediction-count" placeholder="Через сколько патронов?" min="1">
+            <select id="prediction-type">
+                <option value="live">Живой</option>
+                <option value="blank">Пустой</option>
+            </select>
+            <button onclick="addPrediction()">Добавить предсказание</button>
+        </div>
+        <div class="predictions">
+            <h2>Предсказания:</h2>
+            <ul id="prediction-list"></ul>
+        </div>
+        <div class="history">
+            <h2>История выстрелов:</h2>
+            <ul id="history-list"></ul>
+        </div>
+        <div class="shoot-buttons">
+            <h2>Выстрелы:</h2>
+            <button onclick="shoot('live')">Выстрелил живой</button>
+            <button onclick="shoot('blank')">Выстрелил холостой</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
