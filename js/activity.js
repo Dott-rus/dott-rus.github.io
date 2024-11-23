@@ -4,23 +4,43 @@ fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
         const status = document.getElementById('status');
-        const statusCurrent = data.status;
-        if (statusCurrent) {
+        const statusCurrent = data.status || 'offline';
+        if (status) {
             status.textContent = `Status: ${statusCurrent}`;
         }
 
         const statusListening = document.getElementById('listening');
-        const yandexMusic = data.activities.find(activity => activity.name === 'Spotify');
-        if (yandexMusic) {
-            statusListening.textContent = `Listening: ${yandexMusic.details} - ${yandexMusic.state}`;
+        const spotify = data.activities.find(activity => activity.name === 'Spotify');
+        if (statusListening) {
+            if (spotify) {
+                statusListening.textContent = `Listening: ${spotify.details} - ${spotify.state}`;
+            } else {
+                statusListening.textContent = 'Listening: nothing';
+            }
         }
 
-        const statusAPP = document.getElementById('APP');
+        const statusPlaying = document.getElementById('playing');
         const game = data.activities.find(activity => activity.type === 0);
-        if (game) {
-            statusAPP.textContent = `Playing: ${game.name}`;
+        if (statusPlaying) {
+            if (game) {
+                statusPlaying.textContent = `Playing: ${game.name}`;
+            } else {
+                statusPlaying.textContent = 'Playing: nothing';
+            }
         }
     })
     .catch(error => {
-        statusText.textContent = 'Error loading status';
+        console.error('Error fetching status:', error);
+        const status = document.getElementById('status');
+        if (status) {
+            status.textContent = 'Status: offline';
+        }
+        const statusListening = document.getElementById('listening');
+        if (statusListening) {
+            statusListening.textContent = 'Listening: nothing';
+        }
+        const statusPlaying = document.getElementById('playing');
+        if (statusPlaying) {
+            statusPlaying.textContent = 'Playing: nothing';
+        }
     });
