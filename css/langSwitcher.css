@@ -1,0 +1,61 @@
+.lang-switcher {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 50;
+    margin: 0;
+    transform: none;
+}
+
+.lang-options {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 51;
+}
+
+.lang-options.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.lang-option {
+    transform: translateX(20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.lang-options.active .lang-option {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.lang-options.active .lang-option:nth-child(1) { transition-delay: 0.1s; }
+.lang-options.active .lang-option:nth-child(2) { transition-delay: 0.2s; }
+
+.current-lang {
+    position: relative;
+    overflow: hidden;
+}
+
+.current-lang::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #6c5ce7;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.current-lang:hover::after {
+    transform: translateX(0);
+}

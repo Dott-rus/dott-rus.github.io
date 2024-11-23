@@ -1,149 +1,173 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Личная страница Dott</title>
+    <title>dudosa</title>
     <link rel="stylesheet" href="dist.css">
+    <link rel="stylesheet" href="css/langSwitcher.css">
+    <link rel="preload" href="https://api.statusbadges.me/presence/578276833624195125" as="fetch" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-        ym(98685408, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
-        });
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/98685408" style="position:absolute; left:-9999px;" alt="" /></div> Turn on js for normal work of the site</noscript>
-    <!-- /Yandex.Metrika counter -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/activity.js"></script>
+    <script src="js/langSwitcher.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/email-protection.js"></script>
 </head>
-
-<body>
-    <!-- Header -->
-    <header class="bg-purple p-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold" id="greeting">Hello, I'm Dott</h1>
-        <div class="relative">
-            <button class="lang-button z-auto" onclick="toggleDropdown()">Lang</button>
-            <div id="dropdownContent" class="hidden absolute right-0 mt-2 bg-white rounded-lg shadow-lg">
-                <a href="#" onclick="setLocale('ru')" class="block px-4 py-2 text-black hover:bg-gray-100 rounded-t-lg">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAiklEQVQ4EWNgGBLg/fv3Au/fvzegBMM9+vr1a4d3796df/fu3X8K8f03b94EMLx7924/hQYhO+Q+yEBkAYrZ1DcwrnjVFWpiBiWHnv/UxCPRQG279ovUxAznFDT+UxPTxMD71HOh+nmG0woaDucU1N9Tbqj6+7MKGgnwUgdkMCX4vIKCANywQc0AACNMBdjYed4iAAAAAElFTkSuQmCC" alt="Русский" class="inline-block mr-2">RUS
-                </a>
-                <a href="#" onclick="setLocale('en')" class="block px-4 py-2 text-black hover:bg-gray-100 rounded-b-lg">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABG0lEQVQ4EWNgGBLAwaFAwMqqwAAfXq9qaoAPwz1qY5PjYGOdd97GOu8/Przd0PEDIbxexcSBwcY6d39r61KwYZUVs/8nJnTC2SALQGIg+t27d8Tg9wwwV+XmTPrv4V4ONjAkpAHMnjRxHdzVm5RN/hODwQbCNIJcBzIUZCDMZSCLQJa+ff36MTEY7kKQASCDQIbCDIa5GmTgkYSc88RgsIEwA0A0zFCYt2EufHLyzGFiMNhAkGaQK0DehWGYGIy+OnP+AWIwQ1Zm/wFiMDGGgdQwvLh6/QQ1McOBgNgb1MQM796+/UBNzEBMYiVFDcO7d+/uE5mtiMt6B2JSbHc5+D2mFO9xDLh6NK88Al7qgEoKirCCgQDcsEHNAACwfwy7CxhuYQAAAABJRU5ErkJggg==" alt="English" class="inline-block mr-2">ENG
-                </a>
-            </div>
+<body class="min-h-screen flex flex-col justify-center items-center bg-[#0a0a13] text-white m-0 font-sans">
+    <noscript>
+        <div class="noscript-warning">
+            <p><strong>Oops! JavaScript seems to be disabled</strong></p>
+            <p>Some features might not work as expected</p>
+            <p class="joke">Why did the JavaScript developer wear glasses? Because they couldn't C# 😎</p>
         </div>
-    </header>
+    </noscript>
 
-    <!-- About Section -->
-    <section class="px-6 py-4">
-        <h2 class="section-title" id="about-title">About Me</h2>
-    
-<img class="rounded-full max-h-48 mx-auto m-4 stroke-2 stroke-purple" src="https://www.gravatar.com/avatar/cc9205eeaa3c7d7b4d3b59b4383eea3f3816d6c0f8108c3d51d17b8e39f7487e?size=256">    
-        <p class="mt-4" id="about-text">
+    <div class="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r origin-left z-50" style="background-image: linear-gradient(to right, rgb(168, 85, 247), rgb(59, 130, 246));" data-id="2"></div>
+    <div id="tsparticles" class="fixed w-full h-full -z-10 pointer-events-none"></div>
+
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+        <button id="langToggle" class="current-lang bg-[#0d0d16] text-white px-4 py-2 rounded-lg border border-[#6c5ce7]/20 hover:border-[#6c5ce7] transition-all duration-300 flex items-center gap-2">
+            <span class="text-sm font-medium" id="currentLang">English</span>
+            <svg class="w-4 h-4 transition-transform duration-300" id="langArrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+        <div class="lang-options bg-[#0d0d16] rounded-lg border border-[#6c5ce7]/20 shadow-lg py-1">
+            <button class="lang-option w-full px-3 py-2 text-left text-sm hover:bg-[#6c5ce7]/10 transition-colors flex items-center gap-2" data-lang="en" data-flag="GB">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABG0lEQVQ4EWNgGBLAwaFAwMqqwAAfXq9qaoAPwz1qY5PjYGOdd97GOu8/Przd0PEDIbxexcSBwcY6d39r61KwYZUVs/8nJnTC2SALQGIg+t27d8Tg9wwwV+XmTPrv4V4ONjAkpAHMnjRxHdzVm5RN/hODwQbCNIJcBzIUZCDMZSCLQJa+ff36MTEY7kKQASCDQIbCDIa5GmTgkYSc88RgsIEwA0A0zFCYt2EufHLyzGFiMNhAkGaQK0DehWGYGIy+OnP+AWIwQ1Zm/wFiMDGGgdQwvLh6/QQ1McOBgNgb1MQM796+/UBNzEBMYiVFDcO7d+/uE5mtiMt6B2JSbHc5+D2mFO9xDLh6NK88Al7qgEoKirCCgQDcsEHNAACwfwy7CxhuYQAAAABJRU5ErkJggg=="
+                alt="English" class="w-5 h-4 rounded object-cover">
+                English
+            </button>
+            <button class="lang-option w-full px-3 py-2 text-left text-sm hover:bg-[#6c5ce7]/10 transition-colors flex items-center gap-2" data-lang="ru" data-flag="RU">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAiklEQVQ4EWNgGBLg/fv3Au/fvzegBMM9+vr1a4d3796df/fu3X8K8f03b94EMLx7924/hQYhO+Q+yEBkAYrZ1DcwrnjVFWpiBiWHnv/UxCPRQG279ovUxAznFDT+UxPTxMD71HOh+nmG0woaDucU1N9Tbqj6+7MKGgnwUgdkMCX4vIKCANywQc0AACNMBdjYed4iAAAAAElFTkSuQmCC" 
+                alt="Русский" class="w-5 h-4 rounded object-cover">
+                Русский
+            </button>
+        </div>
+    </div>
+
+    <div class="text-center z-10 p-8 !mt-[19rem] max-w-5xl animate-fade-in">
+        <img src="https://www.gravatar.com/avatar/cc9205eeaa3c7d7b4d3b59b4383eea3f3816d6c0f8108c3d51d17b8e39f7487e?size=256" alt="Profile" 
+             class="w-[200px] h-[200px] rounded-full mb-6 mx-auto border-[3px] border-[#6c5ce7] shadow-[0_0_20px_rgba(108,92,231,0.3)]">
+        
+        <h1 class="text-4xl font-bold mb-4 bg-gradient-to-r from-[#6c5ce7] to-[#a29bfe] text-transparent bg-clip-text" data-translate="greeting">
+            Hello, I'm dott
+        </h1>
+        
+        <p class="text-[#a0a0a0] mb-8 leading-relaxed" data-translate="aboutText">
             I am a developer with an interest in technology, manga, and creating cool projects. Always looking for new ways to improve my skills and make the world a little more interesting.
         </p>
-    
-    
-    
-    </section>
-
-
-
-    <!-- Projects Section -->
-    <section class="px-6 py-4">
-        <h2 class="section-title" id="projects-title">Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 max-w-7xl mx-auto">
-            <!-- Project 1 -->
-            <div class="project-card">
-                <a href="https://github.com/Dott-rus/MusicPlayerPythonEdition" target="_blank" class="block">
-                    <img src="Project1.png" alt="Music Player" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-lg font-semibold mb-2" id="project1-title">Python Music Player</h3>
-                    <p class="text-gray-300 text-sm" id="project1-description">
-                        In short, the player is based on Mixer<br>
-                        Music engine for PyGame games (Yes, it's that weird, but otherwise I couldn't implement some of the features 😅 )
-                    </p>
-                </a>
-            </div>
-            <!-- Project 2 -->
-            <div class="project-card">
-                <a href="https://github.com/Dott-rus/TicTacToePythonEdition" target="_blank" class="block">
-                    <img src="Project2.png" alt="Tic-tac-toe" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-lg font-semibold mb-2" id="project2-title">Tic-tac-toe in Python</h3>
-                    <p class="text-gray-300 text-sm" id="project2-description">The simplest tic-tac-toe you could think of, but with "scripted AI"</p>
-                </a>
-            </div>
-            <!-- Project 3 -->
-            <div class="project-card">
-                <img src="https://osu.ppy.sh/images/layout/avatar-guest@2x.png" alt="N/a" class="w-full h-48 object-cover rounded-lg mb-4">
-                <h3 class="text-lg font-semibold mb-2" id="project3-title">N/a</h3>
-                <p class="text-gray-300 text-sm" id="project3-description">There is nothing yet :/</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-purple p-5 text-center mt-12">
-        <h2 class="section-title" id="contacts-title">Contacts</h2>
-        <div class="flex justify-center gap-6 mt-4">
-            <a href="https://github.com/dott-rus" target="_blank" class="text-white hover:text-accent transition-colors duration-300">
-                <i class="fa-brands fa-github text-3xl"></i>
+        
+        <div class="flex justify-center gap-6 mb-8">
+            <a href="https://t.me/dott" target="_blank" 
+               class="w-10 h-10 flex items-center justify-center bg-[#6c5ce7]/10 rounded-full transition-all duration-300 hover:bg-[#6c5ce7]/30 hover:-translate-y-0.5">
+                <i class="fas fa-paper-plane"></i>
             </a>
-            <a href="mailto:dott@somedott.space" class="text-white hover:text-accent transition-colors duration-300">
-                <i class="fas fa-envelope text-3xl"></i>
+            <a href="https://github.com/dott-rus" target="_blank"
+               class="w-10 h-10 flex items-center justify-center bg-[#6c5ce7]/10 rounded-full transition-all duration-300 hover:bg-[#6c5ce7]/30 hover:-translate-y-0.5">
+                <i class="fab fa-github"></i>
             </a>
-            <a href="https://t.me/dott" target="_blank" class="text-white hover:text-accent transition-colors duration-300">
-                <i class="fas fa-paper-plane text-3xl"></i>
+            <a href="mailto:"
+               class="w-10 h-10 flex items-center justify-center bg-[#6c5ce7]/10 rounded-full transition-all duration-300 hover:bg-[#6c5ce7]/30 hover:-translate-y-0.5">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://discord.com/users/dott" target="_blank"
+               class="w-10 h-10 flex items-center justify-center bg-[#6c5ce7]/10 rounded-full transition-all duration-300 hover:bg-[#6c5ce7]/30 hover:-translate-y-0.5">
+                <i class="fab fa-discord"></i>
+            </a>
+            <a href="https://www.last.fm/ru/user/someDott" target="_blank"
+               class="w-10 h-10 flex items-center justify-center bg-[#6c5ce7]/10 rounded-full transition-all duration-300 hover:bg-[#6c5ce7]/30 hover:-translate-y-0.5">
+                <i class="fab fa-lastfm"></i>
             </a>
         </div>
-    </footer>
 
-    <script src="translations.js"></script>
-    <script>
-        function toggleDropdown() {
-            document.getElementById("dropdownContent").classList.toggle("hidden");
-        }
+        <div class="flex flex-wrap justify-center gap-4 mb-16">
+            <div id="status" 
+                 class=" px-4 py-1.5 rounded-full text-sm bg-[#6c5ce7]/10 text-[#a0a0a0]" style="opacity: 1;">
+                Status: offline
+            </div>
+            <div id="listening"
+                 class=" px-4 py-1.5 rounded-full text-sm bg-[#6c5ce7]/10 text-[#a0a0a0]" style="opacity: 1;">
+                Listening: nothing
+            </div>
+            <div id="playing"
+                 class=" px-4 py-1.5 rounded-full text-sm bg-[#6c5ce7]/10 text-[#a0a0a0]" style="opacity: 1;">
+                Playing: nothing
+            </div>
+        </div>
 
-        function setLocale(locale) {
-            localStorage.setItem('locale', locale);
-            updateContent(locale);
-        }
+        <div class="mt-16">
+            <h2 class="text-3xl font-bold mb-8 bg-gradient-to-r from-[#6c5ce7] to-[#a29bfe] text-transparent bg-clip-text" data-translate="projectsTitle">
+                My Projects
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project Card 1 -->
+                <div class="bg-[#0d0d16] rounded-lg p-6 border border-[#6c5ce7]/20 hover:border-[#6c5ce7] transition-all duration-300 flex flex-col min-h-[320px]">
+                    <div class="w-12 h-12 bg-[#6c5ce7]/10 rounded-lg flex items-center justify-center mb-4">
+                        <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f3b5.svg" alt="Music emoji" class="w-8 h-8">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white" data-translate="project1.title"></h3>
+                    <p class="text-[#a0a0a0] mb-auto" data-translate="project1.description"></p>
+                    <div class="mt-4">
+                        <div class="flex gap-2 mb-4">
+                            <span class="px-3 py-1 text-sm bg-[#6c5ce7]/10 text-[#a0a0a0] rounded-full hover:bg-[#6c5ce7]/20 transition-colors cursor-pointer" data-translate="project1.tags.0"></span>
+                            <span class="px-3 py-1 text-sm bg-[#6c5ce7]/10 text-[#a0a0a0] rounded-full hover:bg-[#6c5ce7]/20 transition-colors cursor-pointer" data-translate="project1.tags.1"></span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-[#6c5ce7] hover:text-[#a29bfe] transition-colors group">
+                            <span data-translate="project1.learnMore">Learn More</span>
+                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
 
-        function updateContent(locale) {
-            document.getElementById('greeting').textContent = translations[locale].greeting;
-            document.getElementById('about-title').textContent = translations[locale].aboutTitle;
-            document.getElementById('about-text').textContent = translations[locale].aboutText;
-            document.getElementById('projects-title').textContent = translations[locale].projectsTitle;
-            document.getElementById('project1-title').textContent = translations[locale].project1.title;
-            document.getElementById('project1-description').innerHTML = translations[locale].project1.description.replace(/\n/g, '<br>');
-            document.getElementById('project2-title').textContent = translations[locale].project2.title;
-            document.getElementById('project2-description').innerHTML = translations[locale].project2.description.replace(/\n/g, '<br>');
-            document.getElementById('project3-title').textContent = translations[locale].project3.title;
-            document.getElementById('project3-description').innerHTML = translations[locale].project3.description.replace(/\n/g, '<br>');
-            document.getElementById('contacts-title').textContent = translations[locale].contactsTitle;
-        }
+                <!-- Project Card 2 -->
+                <div class="bg-[#0d0d16] rounded-lg p-6 border border-[#6c5ce7]/20 hover:border-[#6c5ce7] transition-all duration-300 flex flex-col min-h-[320px]">
+                    <div class="w-12 h-12 bg-[#6c5ce7]/10 rounded-lg flex items-center justify-center mb-4">
+                        <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f3ae.svg" alt="Game emoji" class="w-8 h-8">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white" data-translate="project2.title"></h3>
+                    <p class="text-[#a0a0a0] mb-auto" data-translate="project2.description"></p>
+                    <div class="mt-4">
+                        <div class="flex gap-2 mb-4">
+                            <span class="px-3 py-1 text-sm bg-[#6c5ce7]/10 text-[#a0a0a0] rounded-full hover:bg-[#6c5ce7]/20 transition-colors cursor-pointer" data-translate="project2.tags.0"></span>
+                            <span class="px-3 py-1 text-sm bg-[#6c5ce7]/10 text-[#a0a0a0] rounded-full hover:bg-[#6c5ce7]/20 transition-colors cursor-pointer" data-translate="project2.tags.1"></span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-[#6c5ce7] hover:text-[#a29bfe] transition-colors group">
+                            <span data-translate="project2.learnMore">Learn More</span>
+                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
 
-        window.onclick = function(event) {
-            if (!event.target.matches('.lang-button')) {
-                var dropdown = document.getElementById("dropdownContent");
-                if (!dropdown.classList.contains('hidden')) {
-                    dropdown.classList.add('hidden');
-                }
-            }
-        };
-
-        window.onload = () => {
-            const savedLocale = localStorage.getItem('locale') || 'ru';
-            updateContent(savedLocale);
-        };
-    </script>
+                <!-- Project Card 3 -->
+                <div class="bg-[#0d0d16] rounded-lg p-6 border border-[#6c5ce7]/20 hover:border-[#6c5ce7] transition-all duration-300 flex flex-col min-h-[320px]">
+                    <div class="w-12 h-12 bg-[#6c5ce7]/10 rounded-lg flex items-center justify-center mb-4">
+                        <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/2753.svg" alt="Question emoji" class="w-8 h-8">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white" data-translate="project3.title"></h3>
+                    <p class="text-[#a0a0a0] mb-auto" data-translate="project3.description"></p>
+                    <div class="mt-4">
+                        <div class="flex gap-2 mb-4">
+                            <span class="px-3 py-1 text-sm bg-[#6c5ce7]/10 text-[#a0a0a0] rounded-full hover:bg-[#6c5ce7]/20 transition-colors cursor-pointer" data-translate="project3.tags.0"></span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-[#6c5ce7] hover:text-[#a29bfe] transition-colors group">
+                            <span data-translate="project3.learnMore">Learn More</span>
+                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
