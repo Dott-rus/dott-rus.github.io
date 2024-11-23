@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-8 space-y-8">
+    <!-- object-cover: Масштабирует изображение с сохранением пропорций, обрезая лишнее -->
+    <div class="space-y-2">
+        <p>object-cover - изображение заполняет контейнер, сохраняя пропорции (может обрезаться):</p>
+        <img src="image.jpg" class="w-64 h-64 object-cover">
+    </div>
+
+    <!-- object-contain: Помещает всё изображение внутрь контейнера -->
+    <div class="space-y-2">
+        <p>object-contain - всё изображение видно целиком (могут быть пустые области):</p>
+        <img src="image.jpg" class="w-64 h-64 object-contain">
+    </div>
+
+    <!-- object-fill: Растягивает изображение на весь контейнер -->
+    <div class="space-y-2">
+        <p>object-fill - растягивает изображение (может исказить пропорции):</p>
+        <img src="image.jpg" class="w-64 h-64 object-fill">
+    </div>
+
+    <!-- object-none: Показывает изображение в оригинальном размере -->
+    <div class="space-y-2">
+        <p>object-none - оригинальный размер (может выходить за пределы):</p>
+        <img src="image.jpg" class="w-64 h-64 object-none">
+    </div>
+
+    <!-- object-scale-down: Уменьшает изображение если оно больше контейнера -->
+    <div class="space-y-2">
+        <p>object-scale-down - уменьшает если нужно, но не увеличивает:</p>
+        <img src="image.jpg" class="w-64 h-64 object-scale-down">
+    </div>
+</body>
+</html>

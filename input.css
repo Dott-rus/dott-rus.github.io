@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-primary text-white;
+    }
+}
+
+@layer components {
+    /* Lang button with specific styling */
+    .lang-button {
+        @apply bg-[#7C4DFF] text-white px-6 py-2 rounded-[20px] hover:bg-opacity-90 font-medium;
+    }
+    
+    /* Project cards with dark background */
+    .project-card {
+        @apply bg-[rgba(46,46,102,0.5)] rounded-xl p-4 text-center transition-all duration-300 hover:scale-105 hover:bg-accent overflow-hidden;
+    }
+
+    /* Section titles with accent underline */
+    .section-title {
+        @apply text-xl font-bold pb-2 relative;
+    }
+
+    .section-title::after {
+        content: '';
+        @apply absolute bottom-0 left-0 w-full h-[2px] bg-[#7C4DFF];
+    }
+
+    /* Project card content */
+    .project-card img {
+        @apply w-full h-48 object-cover rounded-lg mb-4 transition-all duration-300;
+    }
+
+    .project-card h3 {
+        @apply text-lg font-semibold mb-2;
+    }
+
+    .project-card p {
+        @apply text-gray-300 text-sm;
+    }
+
+    /* Dropdown menu */
+    #dropdownContent {
+        @apply mt-2 bg-white rounded-lg shadow-lg overflow-hidden;
+    }
+
+    #dropdownContent a {
+        @apply block px-4 py-2 text-black hover:bg-gray-100 transition-colors duration-200;
+    }
+
+    #dropdownContent a:first-child {
+        @apply rounded-t-lg;
+    }
+
+    #dropdownContent a:last-child {
+        @apply rounded-b-lg;
+    }
+
+    #dropdownContent img {
+        @apply inline-block mr-2;
+    }
+}
