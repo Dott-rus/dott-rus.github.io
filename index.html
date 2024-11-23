@@ -6,44 +6,24 @@
     <title>dudosa</title>
     <link rel="stylesheet" href="dist.css">
     <link rel="stylesheet" href="css/langSwitcher.css">
+    <link rel="preload" href="https://api.statusbadges.me/presence/578276833624195125" as="fetch" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
-    <script src="translations.js"></script>
+    <script src="js/translations.js"></script>
     <script src="js/activity.js"></script>
     <script src="js/langSwitcher.js"></script>
-    <style>
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-            background: #0a0a13;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: #0d0d16;
-            border-radius: 5px;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: #6c5ce7;
-            border-radius: 5px;
-            border: 2px solid #0d0d16;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: #8A7FFF;
-        }
-
-        /* Firefox */
-        * {
-            scrollbar-width: none;
-            scrollbar-color: #6c5ce7 #0d0d16;
-        }
-    </style>
-
-
-
+    <script src="js/particles.js"></script>
+    <script src="js/email-protection.js"></script>
 </head>
 <body class="min-h-screen flex flex-col justify-center items-center bg-[#0a0a13] text-white m-0 font-sans">
+    <noscript>
+        <div class="noscript-warning">
+            <p><strong>Oops! JavaScript seems to be disabled</strong></p>
+            <p>Some features might not work as expected</p>
+            <p class="joke">Why did the JavaScript developer wear glasses? Because they couldn't C# 😎</p>
+        </div>
+    </noscript>
+
     <div class="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r origin-left z-50" style="background-image: linear-gradient(to right, rgb(168, 85, 247), rgb(59, 130, 246));" data-id="2"></div>
     <div id="tsparticles" class="fixed w-full h-full -z-10 pointer-events-none"></div>
 
@@ -57,17 +37,19 @@
         </button>
         <div class="lang-options bg-[#0d0d16] rounded-lg border border-[#6c5ce7]/20 shadow-lg py-1">
             <button class="lang-option w-full px-3 py-2 text-left text-sm hover:bg-[#6c5ce7]/10 transition-colors flex items-center gap-2" data-lang="en" data-flag="GB">
-                <img src="https://osu.ppy.sh/images/flags/GB.png" alt="English" class="w-5 h-4 rounded object-cover">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABG0lEQVQ4EWNgGBLAwaFAwMqqwAAfXq9qaoAPwz1qY5PjYGOdd97GOu8/Przd0PEDIbxexcSBwcY6d39r61KwYZUVs/8nJnTC2SALQGIg+t27d8Tg9wwwV+XmTPrv4V4ONjAkpAHMnjRxHdzVm5RN/hODwQbCNIJcBzIUZCDMZSCLQJa+ff36MTEY7kKQASCDQIbCDIa5GmTgkYSc88RgsIEwA0A0zFCYt2EufHLyzGFiMNhAkGaQK0DehWGYGIy+OnP+AWIwQ1Zm/wFiMDGGgdQwvLh6/QQ1McOBgNgb1MQM796+/UBNzEBMYiVFDcO7d+/uE5mtiMt6B2JSbHc5+D2mFO9xDLh6NK88Al7qgEoKirCCgQDcsEHNAACwfwy7CxhuYQAAAABJRU5ErkJggg=="
+                alt="English" class="w-5 h-4 rounded object-cover">
                 English
             </button>
             <button class="lang-option w-full px-3 py-2 text-left text-sm hover:bg-[#6c5ce7]/10 transition-colors flex items-center gap-2" data-lang="ru" data-flag="RU">
-                <img src="https://osu.ppy.sh/images/flags/RU.png" alt="Русский" class="w-5 h-4 rounded object-cover">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAiklEQVQ4EWNgGBLg/fv3Au/fvzegBMM9+vr1a4d3796df/fu3X8K8f03b94EMLx7924/hQYhO+Q+yEBkAYrZ1DcwrnjVFWpiBiWHnv/UxCPRQG279ovUxAznFDT+UxPTxMD71HOh+nmG0woaDucU1N9Tbqj6+7MKGgnwUgdkMCX4vIKCANywQc0AACNMBdjYed4iAAAAAElFTkSuQmCC" 
+                alt="Русский" class="w-5 h-4 rounded object-cover">
                 Русский
             </button>
         </div>
     </div>
 
-    <div class="text-center z-10 p-8 max-w-5xl">
+    <div class="text-center z-10 p-8 !mt-[19rem] max-w-5xl animate-fade-in">
         <img src="https://www.gravatar.com/avatar/cc9205eeaa3c7d7b4d3b59b4383eea3f3816d6c0f8108c3d51d17b8e39f7487e?size=256" alt="Profile" 
              class="w-[200px] h-[200px] rounded-full mb-6 mx-auto border-[3px] border-[#6c5ce7] shadow-[0_0_20px_rgba(108,92,231,0.3)]">
         
@@ -88,7 +70,7 @@
                class="w-10 h-10 flex items-center justify-center bg-[#6c5ce7]/10 rounded-full transition-all duration-300 hover:bg-[#6c5ce7]/30 hover:-translate-y-0.5">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="mailto:dott@somedott.space"
+            <a href="mailto:"
                class="w-10 h-10 flex items-center justify-center bg-[#6c5ce7]/10 rounded-full transition-all duration-300 hover:bg-[#6c5ce7]/30 hover:-translate-y-0.5">
                 <i class="fas fa-envelope"></i>
             </a>
@@ -104,15 +86,15 @@
 
         <div class="flex flex-wrap justify-center gap-4 mb-16">
             <div id="status" 
-                 class="px-4 py-1.5 rounded-full text-sm bg-[#6c5ce7]/10 text-[#a0a0a0]">
+                 class=" px-4 py-1.5 rounded-full text-sm bg-[#6c5ce7]/10 text-[#a0a0a0]" style="opacity: 1;">
                 Status: offline
             </div>
             <div id="listening"
-                 class="px-4 py-1.5 rounded-full text-sm bg-[#6c5ce7]/10 text-[#a0a0a0]">
+                 class=" px-4 py-1.5 rounded-full text-sm bg-[#6c5ce7]/10 text-[#a0a0a0]" style="opacity: 1;">
                 Listening: nothing
             </div>
             <div id="playing"
-                 class="px-4 py-1.5 rounded-full text-sm bg-[#6c5ce7]/10 text-[#a0a0a0]">
+                 class=" px-4 py-1.5 rounded-full text-sm bg-[#6c5ce7]/10 text-[#a0a0a0]" style="opacity: 1;">
                 Playing: nothing
             </div>
         </div>
@@ -187,80 +169,5 @@
             </div>
         </div>
     </div>
-
-    <script>
-        // Particles configuration
-        tsParticles.load("tsparticles", {
-            particles: {
-                number: {
-                    value: 80,
-                    density: {
-                        enable: true,
-                        value_area: 800
-                    }
-                },
-                color: {
-                    value: ["#6c5ce7", "#a29bfe"]
-                },
-                shape: {
-                    type: "circle",
-                },
-                opacity: {
-                    value: 0.5,
-                    random: false,
-                    anim: {
-                        enable: true,
-                        speed: 1,
-                        opacity_min: 0.1,
-                        sync: false
-                    }
-                },
-                size: {
-                    value: 3,
-                    random: true,
-                    anim: {
-                        enable: false,
-                        speed: 40,
-                        size_min: 0.1,
-                        sync: false
-                    }
-                },
-                line_linked: {
-                    enable: false
-                },
-                move: {
-                    enable: true,
-                    speed: 2,
-                    direction: "none",
-                    random: false,
-                    straight: false,
-                    out_mode: "out",
-                    bounce: false,
-                    attract: {
-                        enable: false,
-                        rotateX: 600,
-                        rotateY: 1200
-                    }
-                }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: {
-                    onhover: {
-                        enable: true,
-                        mode: "repulse"
-                    },
-                    resize: true
-                },
-                modes: {
-                    repulse: {
-                        distance: 100,
-                        duration: 0.4
-                    }
-                }
-            },
-            retina_detect: true
-        });
-    </script>
 </body>
 </html>
