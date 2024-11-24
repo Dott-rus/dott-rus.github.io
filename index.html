@@ -3,6 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="dott - Developer passionate about technology, manga. Explore my portfolio of creative coding projects (and a little bit of web).">
+    <meta name="keywords" content="dott, developer, web development, programming, technology, portfolio">
+    <meta name="author" content="dott">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dottisa.dev">
+    <meta property="og:title" content="dott - Developer Portfolio">
+    <meta property="og:description" content="Developer passionate about technology, manga. Explore my portfolio of creative coding projects (and a little bit of web).">
+    <meta property="og:image" content="https://www.gravatar.com/avatar/cc9205eeaa3c7d7b4d3b59b4383eea3f3816d6c0f8108c3d51d17b8e39f7487e?size=256">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://dottisa.dev">
+    <meta name="twitter:title" content="dott - Developer Portfolio">
+    <meta name="twitter:description" content="Developer passionate about technology, manga. Explore my portfolio of creative coding projects (and a little bit of web).">
+    <meta name="twitter:image" content="https://www.gravatar.com/avatar/cc9205eeaa3c7d7b4d3b59b4383eea3f3816d6c0f8108c3d51d17b8e39f7487e?size=256">
+
+    <title>dott - Developer Portfolio</title>
     <title>dott</title>
     <link rel="stylesheet" href="dist.css">
     <link rel="stylesheet" href="css/langSwitcher.css">
@@ -14,6 +35,24 @@
     <script src="js/langSwitcher.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/email-protection.js"></script>
+
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "dott",
+        "url": "https://dottisa.dev",
+        "sameAs": [
+            "https://github.com/dott-rus",
+            "https://t.me/dott",
+            "https://discord.com/users/dott",
+            "https://www.last.fm/ru/user/someDott"
+        ],
+        "jobTitle": "Developer",
+        "description": "Developer passionate about technology, manga. Explore my portfolio of creative coding projects (and a little bit of web)."
+    }
+    </script>
 </head>
 <body class="min-h-screen flex flex-col justify-center items-center bg-[#0a0a13] text-white m-0 font-sans">
     <noscript>
@@ -29,29 +68,32 @@
 
     <!-- Language Switcher -->
     <div class="lang-switcher">
-        <button id="langToggle" class="current-lang bg-[#0d0d16] text-white px-4 py-2 rounded-lg border border-[#6c5ce7]/20 hover:border-[#6c5ce7] transition-all duration-300 flex items-center gap-2">
+        <button id="langToggle" class="current-lang bg-[#0d0d16] text-white px-4 py-2 rounded-lg border border-[#6c5ce7]/20 hover:border-[#6c5ce7] transition-all duration-300 flex items-center gap-2" aria-label="Language selector">
             <span class="text-sm font-medium" id="currentLang">English</span>
-            <svg class="w-4 h-4 transition-transform duration-300" id="langArrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 transition-transform duration-300" id="langArrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
         </button>
-        <div class="lang-options bg-[#0d0d16] rounded-lg border border-[#6c5ce7]/20 shadow-lg py-1">
-            <button class="lang-option w-full px-3 py-2 text-left text-sm hover:bg-[#6c5ce7]/10 transition-colors flex items-center gap-2" data-lang="en" data-flag="GB">
+        <div class="lang-options bg-[#0d0d16] rounded-lg border border-[#6c5ce7]/20 shadow-lg py-1" role="menu">
+            <button class="lang-option w-full px-3 py-2 text-left text-sm hover:bg-[#6c5ce7]/10 transition-colors flex items-center gap-2" data-lang="en" data-flag="GB" role="menuitem">
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABG0lEQVQ4EWNgGBLAwaFAwMqqwAAfXq9qaoAPwz1qY5PjYGOdd97GOu8/Przd0PEDIbxexcSBwcY6d39r61KwYZUVs/8nJnTC2SALQGIg+t27d8Tg9wwwV+XmTPrv4V4ONjAkpAHMnjRxHdzVm5RN/hODwQbCNIJcBzIUZCDMZSCLQJa+ff36MTEY7kKQASCDQIbCDIa5GmTgkYSc88RgsIEwA0A0zFCYt2EufHLyzGFiMNhAkGaQK0DehWGYGIy+OnP+AWIwQ1Zm/wFiMDGGgdQwvLh6/QQ1McOBgNgb1MQM796+/UBNzEBMYiVFDcO7d+/uE5mtiMt6B2JSbHc5+D2mFO9xDLh6NK88Al7qgEoKirCCgQDcsEHNAACwfwy7CxhuYQAAAABJRU5ErkJggg=="
-                alt="English" class="w-5 h-4 rounded object-cover">
+                alt="English flag" class="w-5 h-4 rounded object-cover">
                 English
             </button>
-            <button class="lang-option w-full px-3 py-2 text-left text-sm hover:bg-[#6c5ce7]/10 transition-colors flex items-center gap-2" data-lang="ru" data-flag="RU">
+            <button class="lang-option w-full px-3 py-2 text-left text-sm hover:bg-[#6c5ce7]/10 transition-colors flex items-center gap-2" data-lang="ru" data-flag="RU" role="menuitem">
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAiklEQVQ4EWNgGBLg/fv3Au/fvzegBMM9+vr1a4d3796df/fu3X8K8f03b94EMLx7924/hQYhO+Q+yEBkAYrZ1DcwrnjVFWpiBiWHnv/UxCPRQG279ovUxAznFDT+UxPTxMD71HOh+nmG0woaDucU1N9Tbqj6+7MKGgnwUgdkMCX4vIKCANywQc0AACNMBdjYed4iAAAAAElFTkSuQmCC" 
-                alt="Русский" class="w-5 h-4 rounded object-cover">
+                alt="Russian flag" class="w-5 h-4 rounded object-cover">
                 Русский
             </button>
         </div>
     </div>
 
-    <div class="text-center z-10 p-8 !mt-[19rem] max-w-5xl animate-fade-in">
-        <img src="https://www.gravatar.com/avatar/cc9205eeaa3c7d7b4d3b59b4383eea3f3816d6c0f8108c3d51d17b8e39f7487e?size=256" alt="Profile" 
-             class="w-[200px] h-[200px] rounded-full mb-6 mx-auto border-[3px] border-[#6c5ce7] shadow-[0_0_20px_rgba(108,92,231,0.3)]">
+    <main class="text-center z-10 p-8 !mt-[19rem] max-w-5xl animate-fade-in">
+        <img src="https://www.gravatar.com/avatar/cc9205eeaa3c7d7b4d3b59b4383eea3f3816d6c0f8108c3d51d17b8e39f7487e?size=256" 
+             alt="dott's profile picture" 
+             class="w-[200px] h-[200px] rounded-full mb-6 mx-auto border-[3px] border-[#6c5ce7] shadow-[0_0_20px_rgba(108,92,231,0.3)]"
+             width="200"
+             height="200">
         
         <h1 class="text-4xl font-bold mb-4 bg-gradient-to-r from-[#6c5ce7] to-[#a29bfe] text-transparent bg-clip-text" data-translate="greeting">
             Hello, I'm dott
@@ -61,54 +103,59 @@
             I am a developer with an interest in technology, manga, and creating cool projects. Always looking for new ways to improve my skills and make the world a little more interesting.
         </p>
         
-        <div class="flex justify-center gap-6 mb-8">
-            <a href="https://t.me/dott" target="_blank" 
-               class="w-10 h-10 flex items-center justify-center bg-[#6c5ce7]/10 rounded-full transition-all duration-300 hover:bg-[#6c5ce7]/30 hover:-translate-y-0.5">
-                <i class="fas fa-paper-plane"></i>
+        <nav class="flex justify-center gap-6 mb-8" aria-label="Social links">
+            <a href="https://t.me/dott" target="_blank" rel="noopener noreferrer"
+               class="w-10 h-10 flex items-center justify-center bg-[#6c5ce7]/10 rounded-full transition-all duration-300 hover:bg-[#6c5ce7]/30 hover:-translate-y-0.5"
+               aria-label="Telegram">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i>
             </a>
-            <a href="https://github.com/dott-rus" target="_blank"
-               class="w-10 h-10 flex items-center justify-center bg-[#6c5ce7]/10 rounded-full transition-all duration-300 hover:bg-[#6c5ce7]/30 hover:-translate-y-0.5">
-                <i class="fab fa-github"></i>
+            <a href="https://github.com/dott-rus" target="_blank" rel="noopener noreferrer"
+               class="w-10 h-10 flex items-center justify-center bg-[#6c5ce7]/10 rounded-full transition-all duration-300 hover:bg-[#6c5ce7]/30 hover:-translate-y-0.5"
+               aria-label="GitHub">
+                <i class="fab fa-github" aria-hidden="true"></i>
             </a>
-            <a href="mailto:"
-               class="w-10 h-10 flex items-center justify-center bg-[#6c5ce7]/10 rounded-full transition-all duration-300 hover:bg-[#6c5ce7]/30 hover:-translate-y-0.5">
-                <i class="fas fa-envelope"></i>
+            <a href="mailto:" id="email-link"
+               class="w-10 h-10 flex items-center justify-center bg-[#6c5ce7]/10 rounded-full transition-all duration-300 hover:bg-[#6c5ce7]/30 hover:-translate-y-0.5"
+               aria-label="Email">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
             </a>
-            <a href="https://discord.com/users/dott" target="_blank"
-               class="w-10 h-10 flex items-center justify-center bg-[#6c5ce7]/10 rounded-full transition-all duration-300 hover:bg-[#6c5ce7]/30 hover:-translate-y-0.5">
-                <i class="fab fa-discord"></i>
+            <a href="https://discord.com/users/dott" target="_blank" rel="noopener noreferrer"
+               class="w-10 h-10 flex items-center justify-center bg-[#6c5ce7]/10 rounded-full transition-all duration-300 hover:bg-[#6c5ce7]/30 hover:-translate-y-0.5"
+               aria-label="Discord">
+                <i class="fab fa-discord" aria-hidden="true"></i>
             </a>
-            <a href="https://www.last.fm/ru/user/someDott" target="_blank"
-               class="w-10 h-10 flex items-center justify-center bg-[#6c5ce7]/10 rounded-full transition-all duration-300 hover:bg-[#6c5ce7]/30 hover:-translate-y-0.5">
-                <i class="fab fa-lastfm"></i>
+            <a href="https://www.last.fm/ru/user/someDott" target="_blank" rel="noopener noreferrer"
+               class="w-10 h-10 flex items-center justify-center bg-[#6c5ce7]/10 rounded-full transition-all duration-300 hover:bg-[#6c5ce7]/30 hover:-translate-y-0.5"
+               aria-label="Last.fm">
+                <i class="fab fa-lastfm" aria-hidden="true"></i>
             </a>
-        </div>
+        </nav>
 
         <div class="flex flex-wrap justify-center gap-4 mb-16">
             <div id="status" 
-                 class=" px-4 py-1.5 rounded-full text-sm bg-[#6c5ce7]/10 text-[#a0a0a0]" style="opacity: 1;">
+                 class="px-4 py-1.5 rounded-full text-sm bg-[#6c5ce7]/10 text-[#a0a0a0]" style="opacity: 1;" role="status">
                 Status: offline
             </div>
             <div id="listening"
-                 class=" px-4 py-1.5 rounded-full text-sm bg-[#6c5ce7]/10 text-[#a0a0a0]" style="opacity: 1;">
+                 class="px-4 py-1.5 rounded-full text-sm bg-[#6c5ce7]/10 text-[#a0a0a0]" style="opacity: 1;" role="status">
                 Listening: nothing
             </div>
             <div id="playing"
-                 class=" px-4 py-1.5 rounded-full text-sm bg-[#6c5ce7]/10 text-[#a0a0a0]" style="opacity: 1;">
+                 class="px-4 py-1.5 rounded-full text-sm bg-[#6c5ce7]/10 text-[#a0a0a0]" style="opacity: 1;" role="status">
                 Playing: nothing
             </div>
         </div>
 
-        <div class="mt-16">
+        <section class="mt-16">
             <h2 class="text-3xl font-bold mb-8 bg-gradient-to-r from-[#6c5ce7] to-[#a29bfe] text-transparent bg-clip-text" data-translate="projectsTitle">
                 My Projects
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Project Card 1 -->
-                <div class="bg-[#0d0d16] rounded-lg p-6 border border-[#6c5ce7]/20 hover:border-[#6c5ce7] transition-all duration-300 flex flex-col min-h-[320px]">
+                <article class="bg-[#0d0d16] rounded-lg p-6 border border-[#6c5ce7]/20 hover:border-[#6c5ce7] transition-all duration-300 flex flex-col min-h-[320px]">
                     <div class="w-12 h-12 bg-[#6c5ce7]/10 rounded-lg flex items-center justify-center mb-4">
-                        <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f3b5.svg" alt="Music emoji" class="w-8 h-8">
+                        <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f3b5.svg" alt="Music project icon" class="w-8 h-8">
                     </div>
                     <h3 class="text-xl font-semibold mb-2 text-white" data-translate="project1.title"></h3>
                     <p class="text-[#a0a0a0] mb-auto" data-translate="project1.description"></p>
@@ -119,17 +166,17 @@
                         </div>
                         <a href="#" class="inline-flex items-center text-[#6c5ce7] hover:text-[#a29bfe] transition-colors group">
                             <span data-translate="project1.learnMore">Learn More</span>
-                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                             </svg>
                         </a>
                     </div>
-                </div>
+                </article>
 
                 <!-- Project Card 2 -->
-                <div class="bg-[#0d0d16] rounded-lg p-6 border border-[#6c5ce7]/20 hover:border-[#6c5ce7] transition-all duration-300 flex flex-col min-h-[320px]">
+                <article class="bg-[#0d0d16] rounded-lg p-6 border border-[#6c5ce7]/20 hover:border-[#6c5ce7] transition-all duration-300 flex flex-col min-h-[320px]">
                     <div class="w-12 h-12 bg-[#6c5ce7]/10 rounded-lg flex items-center justify-center mb-4">
-                        <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f3ae.svg" alt="Game emoji" class="w-8 h-8">
+                        <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f3ae.svg" alt="Game project icon" class="w-8 h-8">
                     </div>
                     <h3 class="text-xl font-semibold mb-2 text-white" data-translate="project2.title"></h3>
                     <p class="text-[#a0a0a0] mb-auto" data-translate="project2.description"></p>
@@ -140,17 +187,17 @@
                         </div>
                         <a href="#" class="inline-flex items-center text-[#6c5ce7] hover:text-[#a29bfe] transition-colors group">
                             <span data-translate="project2.learnMore">Learn More</span>
-                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                             </svg>
                         </a>
                     </div>
-                </div>
+                </article>
 
                 <!-- Project Card 3 -->
-                <div class="bg-[#0d0d16] rounded-lg p-6 border border-[#6c5ce7]/20 hover:border-[#6c5ce7] transition-all duration-300 flex flex-col min-h-[320px]">
+                <article class="bg-[#0d0d16] rounded-lg p-6 border border-[#6c5ce7]/20 hover:border-[#6c5ce7] transition-all duration-300 flex flex-col min-h-[320px]">
                     <div class="w-12 h-12 bg-[#6c5ce7]/10 rounded-lg flex items-center justify-center mb-4">
-                        <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/2753.svg" alt="Question emoji" class="w-8 h-8">
+                        <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/2753.svg" alt="Future project icon" class="w-8 h-8">
                     </div>
                     <h3 class="text-xl font-semibold mb-2 text-white" data-translate="project3.title"></h3>
                     <p class="text-[#a0a0a0] mb-auto" data-translate="project3.description"></p>
@@ -160,14 +207,14 @@
                         </div>
                         <a href="#" class="inline-flex items-center text-[#6c5ce7] hover:text-[#a29bfe] transition-colors group">
                             <span data-translate="project3.learnMore">Learn More</span>
-                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                             </svg>
                         </a>
                     </div>
-                </div>
+                </article>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 </body>
 </html>
