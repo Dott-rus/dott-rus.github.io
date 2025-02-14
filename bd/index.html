@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой День Рождения!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            text-align: center;
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+            margin: 0;
+        }
+        h1 {
+            font-size: 4em;
+            color: #ff6f61;
+            text-shadow: 0 0 10px #ff6f61, 0 0 20px #ff6f61;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .highlight {
+            color: #ff6f61;
+            font-weight: bold;
+        }
+        .balloon {
+            display: inline-block;
+            font-size: 2em;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        .cake {
+            font-size: 4em;
+            margin-top: 20px;
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px #ff6f61, 0 0 20px #ff6f61;
+            }
+            100% {
+                text-shadow: 0 0 20px #ff6f61, 0 0 40px #ff6f61;
+            }
+        }
+        #timer {
+            font-size: 2.5em;
+            margin: 30px 0;
+            font-weight: bold;
+            color: #ff6f61;
+            text-shadow: 0 0 10px #ff6f61, 0 0 20px #ff6f61;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 1.2em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <h1>Скоро Мой День Рождения!</h1>
+    <div id="timer">Загрузка таймера...</div>
+    <div class="balloon">🎈</div>
+    <div class="balloon">🎈</div>
+    <div class="balloon">🎈</div>
+    <div class="cake">🎂</div>
+    <p class="highlight">Считаем дни до праздника!</p>
+
+    <!-- Подключаем библиотеку canvas-confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        // Дата Дня Рождения
+        const birthday = new Date("February 19, 2025 00:00:00").getTime();
+
+        // Функция для обновления таймера
+        function updateTimer() {
+            const now = new Date().getTime();
+            const timeLeft = birthday - now;
+
+            if (timeLeft <= 0) {
+                document.getElementById("timer").innerHTML = "🎉🎉🎉";
+                triggerConfetti();
+                return;
+            }
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        // Функция для запуска конфетти
+        function triggerConfetti() {
+            confetti({
+                particleCount: 150, // Количество частиц
+                spread: 70, // Насколько широко разлетаются конфетти
+                origin: { y: 0.6 }, // Откуда летят конфетти (0.6 = чуть выше середины)
+            });
+        }
+
+        // Обновляем таймер каждую секунду
+        setInterval(updateTimer, 1000);
+
+        // Для тестирования: вызови triggerConfetti() в консоли
+        window.triggerConfetti = triggerConfetti;
+    </script>
+</body>
+</html>
