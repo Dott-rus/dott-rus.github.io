@@ -11,14 +11,14 @@
     
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://dottisa.dev">
+    <meta property="og:url" content="https://somedott.space">
     <meta property="og:title" content="dott - Developer Portfolio">
     <meta property="og:description" content="Developer passionate about technology, manga. Explore my portfolio of creative coding projects (and a little bit of web).">
     <meta property="og:image" content="https://www.gravatar.com/avatar/cc9205eeaa3c7d7b4d3b59b4383eea3f3816d6c0f8108c3d51d17b8e39f7487e?size=256">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://dottisa.dev">
+    <meta name="twitter:url" content="https://somedott.space">
     <meta name="twitter:title" content="dott - Developer Portfolio">
     <meta name="twitter:description" content="Developer passionate about technology, manga. Explore my portfolio of creative coding projects (and a little bit of web).">
     <meta name="twitter:image" content="https://www.gravatar.com/avatar/cc9205eeaa3c7d7b4d3b59b4383eea3f3816d6c0f8108c3d51d17b8e39f7487e?size=256">
@@ -42,11 +42,10 @@
         "@context": "http://schema.org",
         "@type": "Person",
         "name": "dott",
-        "url": "https://dottisa.dev",
+        "url": "https://somedott.space",
         "sameAs": [
             "https://github.com/dott-rus",
             "https://t.me/dott",
-            "https://discord.com/users/dott",
             "https://www.last.fm/ru/user/someDott"
         ],
         "jobTitle": "Developer",
@@ -54,10 +53,11 @@
     }
     </script>
 </head>
-<body class="min-h-screen flex flex-col justify-center items-center bg-[#0a0a13] text-white m-0 font-sans">
+<body class="min-h-screen flex flex-col justify-center items-center bg-[#0a0a13] text-[#ffffff] m-0 font-sans">
     <noscript>
         <div class="noscript-warning">
             <p><strong>Oops! JavaScript seems to be disabled</strong></p>
+            <div style="width: 1px; height: 1px; display: none;" class="bg-primary">
             <p>Some features might not work as expected</p>
             <p class="joke">Why did the JavaScript developer wear glasses? Because they couldn't C# 😎</p>
         </div>
@@ -68,7 +68,7 @@
 
     <!-- Language Switcher -->
     <div class="lang-switcher">
-        <button id="langToggle" class="current-lang bg-[#0d0d16] text-white px-4 py-2 rounded-lg border border-[#6c5ce7]/20 hover:border-[#6c5ce7] transition-all duration-300 flex items-center gap-2" aria-label="Language selector">
+        <button id="langToggle" class="current-lang bg-[#0d0d16] text-[#ffffff] px-4 py-2 rounded-lg border border-[#6c5ce7]/20 hover:border-[#6c5ce7] transition-all duration-300 flex items-center gap-2" aria-label="Language selector">
             <span class="text-sm font-medium" id="currentLang">English</span>
             <svg class="w-4 h-4 transition-transform duration-300" id="langArrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -145,28 +145,33 @@
                 Playing: nothing
             </div>
         </div>
-<fieldset>
-<legend>I`m on spotify!</legend>
-        
-<iframe style="border-radius:0px" src="https://open.spotify.com/embed/track/7i3y3XLzeI2SbJZhBS5yCb?utm_source=generator" width="100%" height="352" frameBorder="1" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-<!-- <iframe src="https://somedott.space/bd/index.html" style="border-radius: 50px; overflow: hidden; width: 100%; height: 700px; border: none;"></iframe> -->
+        <div class="spotify-container">
+            <fieldset class="spotify-fieldset">
+                <legend class="spotify-legend">I'm on Spotify!</legend>
+                <iframe class="spotify-iframe" 
+                        src="https://open.spotify.com/embed/track/7i3y3XLzeI2SbJZhBS5yCb?utm_source=generator" 
+                        frameborder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                </iframe>
+            </fieldset>
+        </div>
 
-</fieldset>
 
-
-
-        <section class="mt-16">
-            <h2 class="text-3xl font-bold mb-8 bg-gradient-to-r from-[#6c5ce7] to-[#a29bfe] text-transparent bg-clip-text" data-translate="projectsTitle">
+        <fieldset>
+            <legend class="color-[#6c5ce7]"><h2 class="text-3xl font-bold bg-gradient-to-r from-[#6c5ce7] to-[#a29bfe] text-transparent bg-clip-text" data-translate="projectsTitle">
                 My Projects
-            </h2>
+            </h2></legend>
             
+            <section class="mt-16">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Project Card 1 -->
                 <article class="bg-[#0d0d16] rounded-lg p-6 border border-[#6c5ce7]/20 hover:border-[#6c5ce7] transition-all duration-300 flex flex-col min-h-[320px]">
                     <div class="w-12 h-12 bg-[#6c5ce7]/10 rounded-lg flex items-center justify-center mb-4">
                         <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f3b5.svg" alt="Music project icon" class="w-8 h-8">
                     </div>
-                    <h3 class="text-xl font-semibold mb-2 text-white" data-translate="project1.title"></h3>
+                    <h3 class="text-xl font-semibold mb-2 text-[#ffffff]" data-translate="project1.title"></h3>
                     <p class="text-[#a0a0a0] mb-auto" data-translate="project1.description"></p>
                     <div class="mt-4">
                         <div class="flex gap-2 mb-4">
@@ -187,7 +192,7 @@
                     <div class="w-12 h-12 bg-[#6c5ce7]/10 rounded-lg flex items-center justify-center mb-4">
                         <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f3ae.svg" alt="Game project icon" class="w-8 h-8">
                     </div>
-                    <h3 class="text-xl font-semibold mb-2 text-white" data-translate="project2.title"></h3>
+                    <h3 class="text-xl font-semibold mb-2 text-[#ffffff]" data-translate="project2.title"></h3>
                     <p class="text-[#a0a0a0] mb-auto" data-translate="project2.description"></p>
                     <div class="mt-4">
                         <div class="flex gap-2 mb-4">
@@ -208,7 +213,7 @@
                     <div class="w-12 h-12 bg-[#6c5ce7]/10 rounded-lg flex items-center justify-center mb-4">
                         <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/2753.svg" alt="Future project icon" class="w-8 h-8">
                     </div>
-                    <h3 class="text-xl font-semibold mb-2 text-white" data-translate="project3.title"></h3>
+                    <h3 class="text-xl font-semibold mb-2 text-[#ffffff]" data-translate="project3.title"></h3>
                     <p class="text-[#a0a0a0] mb-auto" data-translate="project3.description"></p>
                     <div class="mt-4">
                         <div class="flex gap-2 mb-4">
@@ -224,6 +229,7 @@
                 </article>
             </div>
         </section>
+    </fieldset>
     </main>
 </body>
 </html>

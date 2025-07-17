@@ -1,22 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@import "tailwindcss";
 @layer base {
     body {
-        @apply bg-primary text-white;
+      background-color: #1E1E3F;
+      color: #fff;
     }
-}
+  }
 
-@layer components {
+
     /* Lang button with specific styling */
     .lang-button {
-        @apply bg-[#7C4DFF] text-white px-6 py-2 rounded-[20px] hover:bg-opacity-90 font-medium;
+        @apply bg-[#7C4DFF] text-[#ffffff] px-6 py-2 rounded-[20px] font-medium;
     }
     
     /* Project cards with dark background */
     .project-card {
-        @apply bg-[rgba(46,46,102,0.5)] rounded-xl p-4 text-center transition-all duration-300 hover:scale-105 hover:bg-accent overflow-hidden;
+        @apply bg-[rgba(46,46,102,0.5)] rounded-xl p-4 text-center transition-all duration-300 hover:scale-105  overflow-hidden;
     }
 
     /* Section titles with accent underline */
@@ -111,7 +109,7 @@
             opacity: 1;
         }
     }
-}
+
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
@@ -138,4 +136,45 @@
 * {
     scrollbar-width: none;
     scrollbar-color: #6c5ce7 #0d0d16;
+}
+
+
+.spotify-container {
+    max-width: 100%;
+    margin: 20px auto;
+}
+.spotify-fieldset {
+    border: 2px solid #1DB954;
+    border-radius: 18px;
+    padding: 0 15px 15px;
+    position: relative;
+}
+.spotify-legend {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    color: #1DB954;
+    padding: 0 10px;
+    margin-left: 10px;
+}
+.spotify-iframe {
+    border: none;
+    width: 100%;
+    height: 352px;
+}
+
+
+
+
+
+fieldset {
+    border: 2px solid #6c5ce7;
+    border-radius: 18px;
+    padding: 0 15px 15px;
+    position: relative;
+}
+legend {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    padding: 0 10px;
+    margin-left: 10px;
 }
