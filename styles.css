@@ -18,6 +18,10 @@
         @apply bg-[#7C4DFF] text-white px-4 py-2 rounded-lg hover:bg-opacity-90;
     }
 
+    .lang-button {
+        @apply bg-[#7C4DFF] text-white px-6 py-2 rounded-[20px] hover:bg-opacity-90 font-medium;
+    }
+
     /* Project cards */
     .project-card {
         @apply bg-card rounded-xl p-4 text-center transition-all duration-300 hover:scale-105 hover:bg-accent overflow-hidden;
