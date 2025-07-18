@@ -178,3 +178,20 @@ legend {
     padding: 0 10px;
     margin-left: 10px;
 }
+
+
+
+
+
+.musicplayer-container {
+	display: flex;
+	flex-direction: row
+}
+.cover {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+}
+.track, .album, .artist {
+    margin: 10px 0;
+}
