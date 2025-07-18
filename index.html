@@ -35,6 +35,7 @@
     <script src="js/langSwitcher.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/email-protection.js"></script>
+    <script src="js/last.fm_NOT_BY_ME.js"></script>
 
     <!-- Schema.org markup -->
     <script type="application/ld+json">
@@ -45,7 +46,7 @@
         "url": "https://somedott.space",
         "sameAs": [
             "https://github.com/dott-rus",
-            "https://t.me/dott",
+            "https://t.me/adott0",
             "https://www.last.fm/ru/user/someDott"
         ],
         "jobTitle": "Developer",
@@ -119,7 +120,7 @@
                aria-label="Email">
                 <i class="fas fa-envelope" aria-hidden="true"></i>
             </a>
-            <a href="https://discord.com/users/dott" target="_blank" rel="noopener noreferrer"
+            <a href="https://discord.com/users/adott0" target="_blank" rel="noopener noreferrer"
                class="w-10 h-10 flex items-center justify-center bg-[#6c5ce7]/10 rounded-full transition-all duration-300 hover:bg-[#6c5ce7]/30 hover:-translate-y-0.5"
                aria-label="Discord">
                 <i class="fab fa-discord" aria-hidden="true"></i>
@@ -136,10 +137,6 @@
                  class="px-4 py-1.5 rounded-full text-sm bg-[#6c5ce7]/10 text-[#a0a0a0]" style="opacity: 1;" role="status">
                 Status: offline
             </div>
-            <div id="listening"
-                 class="px-4 py-1.5 rounded-full text-sm bg-[#6c5ce7]/10 text-[#a0a0a0]" style="opacity: 1;" role="status">
-                Listening: nothing
-            </div>
             <div id="playing"
                  class="px-4 py-1.5 rounded-full text-sm bg-[#6c5ce7]/10 text-[#a0a0a0]" style="opacity: 1;" role="status">
                 Playing: nothing
@@ -147,24 +144,18 @@
         </div>
         <div class="spotify-container">
             <fieldset class="spotify-fieldset">
-                <legend class="spotify-legend">I'm on Spotify!</legend>
-                <iframe class="spotify-iframe" 
-                        src="https://open.spotify.com/embed/track/7i3y3XLzeI2SbJZhBS5yCb?utm_source=generator" 
-                        frameborder="0" 
-                        allowfullscreen="" 
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                        loading="lazy">
-                </iframe>
+                <legend class="spotify-legend text-left"><h1 class="text-3xl font-bold">I'm on Spotify!</h1></legend>
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/0XBroKRSXRu8hFycsnZpXZ?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </fieldset>
         </div>
 
 
-        <fieldset>
-            <legend class="color-[#6c5ce7]"><h2 class="text-3xl font-bold bg-gradient-to-r from-[#6c5ce7] to-[#a29bfe] text-transparent bg-clip-text" data-translate="projectsTitle">
+        <fieldset class="mt-2.5">
+            <legend class="color-[#6c5ce7] text-left"><h2 class="text-3xl font-bold bg-gradient-to-r from-[#6c5ce7] to-[#a29bfe] text-transparent bg-clip-text" data-translate="projectsTitle">
                 My Projects
             </h2></legend>
             
-            <section class="mt-16">
+            <section class="mt-2.5">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Project Card 1 -->
                 <article class="bg-[#0d0d16] rounded-lg p-6 border border-[#6c5ce7]/20 hover:border-[#6c5ce7] transition-all duration-300 flex flex-col min-h-[320px]">
@@ -229,6 +220,34 @@
                 </article>
             </div>
         </section>
+    </fieldset>
+<div class="mt-2.5"></div>
+    <fieldset>
+        <legend class="color-[#6c5ce7] text-left"> <h1 class="text-3xl font-bold bg-gradient-to-r from-[#6c5ce7] to-[#a29bfe] text-transparent bg-clip-text">Listening or i was to </h1></legend>
+        <noscript>
+            <p>you need javascript enabled to see what i'm listening to!</p>
+            <p>you can also check out my <a href="https://www.last.fm/user/someDott">last.fm</a> profile</p>
+            <p>not need? that's ok :)</p>
+        </noscript>
+            <div class="musicplayer-container ">
+                <img class="cover" id="album-cover" src="https://placehold.co/150x150?text=Something is broken!!" alt="loading">
+                <div class=" text-left space-y-2 ml-2.5 align-middle">
+                    <h1 class="track text-2xl font-bold text-[#6c5ce7]" id="track-title">Wait for it!</h1>
+                    <p class="artist text-lg text-white" id="artist-name">Wait for it!</p>
+                    <p class="album text-sm text-gray-200 italic" id="album-title">Wait for it!</p>
+                    <span class="lastfm-link"><a href="#" target="_blank">See on Last.fm</a></span>
+                </div>
+            </div>
+                
+<div class="flex text-left items-start mt-2">code and API from
+                    <a href="https://tasory.is-a.dev" class="item ml-1" target="_blank">
+                        <img class="rounded-[5px]" src="https://tasory.is-a.dev/src/buttons/mybutton.jpg" alt="tasory">
+                    </a>
+                </div>
+              </a> 
+            </div>
+        
+
     </fieldset>
     </main>
 </body>
