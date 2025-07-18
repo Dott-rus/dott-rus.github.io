@@ -18,9 +18,9 @@ const translations = {
             learnMore: "Подробнее"
         },
         project3: {
-            title: "N/a",
-            description: "Тут пока-что ничего нет :/",
-            tags: ["Coming Soon"],
+            title: "Мой сайт?",
+            description: "Да, я долго думал чем забить это место и решил, что почему бы и нет 🤔",
+            tags: ["Веб", "HTML+JS", "Tailwind"],
             learnMore: "Подробнее"
         },
         contactsTitle: "Контакты",
@@ -50,9 +50,9 @@ const translations = {
             learnMore: "Learn More"
         },
         project3: {
-            title: "N/a",
-            description: "There is nothing yet :/",
-            tags: ["Coming Soon"],
+            title: "My website?",
+            description: "Yeah, I thought long and hard about what to fill this spot with and figured why not 🤔",
+            tags: ["Web", "HTML+JS", "Tailwind"],
             learnMore: "Learn More"
         },
         contactsTitle: "Contacts",

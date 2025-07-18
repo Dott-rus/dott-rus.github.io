@@ -89,7 +89,7 @@
         </div>
     </div>
 
-    <main class="text-center z-10 p-8 !mt-[19rem] max-w-5xl animate-fade-in">
+    <main class="text-center z-10 p-8 !mt-[19rem] max-w-5xl animate-fade-in pb-0">
         <img src="https://www.gravatar.com/avatar/cc9205eeaa3c7d7b4d3b59b4383eea3f3816d6c0f8108c3d51d17b8e39f7487e?size=256" 
              alt="dott's profile picture" 
              class="w-[200px] h-[200px] rounded-full mb-6 mx-auto border-[3px] border-[#6c5ce7] shadow-[0_0_20px_rgba(108,92,231,0.3)]"
@@ -142,6 +142,13 @@
                 Playing: nothing
             </div>
         </div>
+
+        <fieldset>
+            <legend class="color-[#6c5ce7] text-left"> <h1>My current thought: </h1></legend>
+    
+            <div id="statuscafe" class=""><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=somedott" defer></script>
+        </fieldset>
+
         <div class="spotify-container">
             <fieldset class="spotify-fieldset">
                 <legend class="spotify-legend text-left"><h1 class="text-3xl font-bold">I'm on Spotify!</h1></legend>
@@ -202,6 +209,27 @@
                 <!-- Project Card 3 -->
                 <article class="bg-[#0d0d16] rounded-lg p-6 border border-[#6c5ce7]/20 hover:border-[#6c5ce7] transition-all duration-300 flex flex-col min-h-[320px]">
                     <div class="w-12 h-12 bg-[#6c5ce7]/10 rounded-lg flex items-center justify-center mb-4">
+                        <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f310.svg" alt="Future project icon" class="w-8 h-8">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-[#ffffff]" data-translate="project3.title"></h3>
+                    <p class="text-[#a0a0a0] mb-auto" data-translate="project3.description"></p>
+                    <div class="mt-4 -mx-1.5">
+                        <div class="flex gap-2 mb-4  ">
+                            <span class="px-3 py-1 text-sm bg-[#6c5ce7]/10 text-[#a0a0a0] rounded-full hover:bg-[#6c5ce7]/20 transition-colors cursor-pointer" data-translate="project3.tags.0"></span>
+                            <span class="px-3 py-1 text-sm bg-[#6c5ce7]/10 text-[#a0a0a0] rounded-full hover:bg-[#6c5ce7]/20 transition-colors cursor-pointer" data-translate="project3.tags.1"></span>
+                            <span class="px-3 py-1 text-sm bg-[#6c5ce7]/10 text-[#a0a0a0] rounded-full hover:bg-[#6c5ce7]/20 transition-colors cursor-pointer" data-translate="project3.tags.2"></span>
+                        </div>
+                        <a href="https://github.com/Dott-rus/dott-rus.github.io" class="inline-flex items-center text-[#6c5ce7] hover:text-[#a29bfe] transition-colors group">
+                            <span data-translate="project3.learnMore">Learn More</span>
+                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- <article class="bg-[#0d0d16] rounded-lg p-6 border border-[#6c5ce7]/20 hover:border-[#6c5ce7] transition-all duration-300 flex flex-col min-h-[320px]">
+                    <div class="w-12 h-12 bg-[#6c5ce7]/10 rounded-lg flex items-center justify-center mb-4">
                         <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/2753.svg" alt="Future project icon" class="w-8 h-8">
                     </div>
                     <h3 class="text-xl font-semibold mb-2 text-[#ffffff]" data-translate="project3.title"></h3>
@@ -217,7 +245,7 @@
                             </svg>
                         </a>
                     </div>
-                </article>
+                </article> -->
             </div>
         </section>
     </fieldset>
@@ -249,9 +277,19 @@
         
 
     </fieldset>
-    <fieldset><div class=" flex mt-[15px] align-middle">
-        <a href="https://status.cafe"><img src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a>
-        <a href="https://somedott.space"><img src="button.png"></a>
+
+
+
+
+<fieldset style="border-bottom-left-radius: 0; border-bottom-right-radius: 0;" class="mt-2.5"><div class=" flex mt-[15px] align-middle ">
+        Thanks to:<a href="https://status.cafe" class="pl-2 pr-2"><img src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a>
+        Site by:<a href="https://somedott.space" class="pl-2 pr-2"><img src="button.png"></a>
+        My friend(s): 
+
+        <a href="https://tasory.is-a.dev" class="pl-2 pr-2" target="_blank">
+            <img src="https://tasory.is-a.dev/src/buttons/mybutton.jpg" alt="tasory">
+        </a>
+
         </div>
     </fieldset>    
 
