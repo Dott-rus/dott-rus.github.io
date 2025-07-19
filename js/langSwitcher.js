@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const langOptions = document.querySelector('.lang-options');
     const langArrow = document.getElementById('langArrow');
     const currentLangText = document.getElementById('currentLang');
+    const currentLangImg = document.getElementById('currentLangImg');
     let currentLang = 'en';
 
     langToggle.addEventListener('click', () => {
@@ -12,9 +13,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.lang-option').forEach(option => {
         option.addEventListener('click', (e) => {
-            const lang = e.target.dataset.lang;
+            const optionElement = e.currentTarget;
+            const lang = optionElement.dataset.lang;
             currentLang = lang;
-            currentLangText.textContent = e.target.textContent.trim();
+            currentLangText.textContent = optionElement.textContent.trim();
+
+            // Update the active language image
+            const img = optionElement.querySelector('img');
+            if (img) {
+                currentLangImg.src = img.src;
+                currentLangImg.alt = img.alt;
+            }
+
             langOptions.classList.remove('active');
             langArrow.style.transform = '';
             updateContent(lang);
