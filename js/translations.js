@@ -4,6 +4,13 @@ const translations = {
         aboutTitle: "Обо мне",
         aboutText: "Я разработчик с интересом к технологиям, манге и созданию крутых проектов. Постоянно ищу новые способы улучшить свои навыки и сделать мир немного интереснее.",
         projectsTitle: "Проекты",
+        currentThought: "Сейчас думаю (ENG)", 
+        spotifyTitle: "Я на спотике!", 
+        listeningTitle: "Слушаю (ал)", 
+        footerThanksTo: "Спасибки вам:",
+        footerSiteBy: "Создан:",
+        footerMyFriends: "Друганы:",
+        footerCodeAndAPIFrom: "код и API:",
         project1: {
             title: "Музыкальный плеер на Python",
             description: `Вкраце, плеер базирован на Mixer
@@ -37,6 +44,13 @@ const translations = {
         aboutTitle: "About Me",
         aboutText: "I am a developer with an interest in technology, manga, and creating cool projects. Always looking for new ways to improve my skills and make the world a little more interesting.",
         projectsTitle: "Projects",
+        currentThought: "My current thought",
+        spotifyTitle: "I'm on Spotify!",
+        listeningTitle: "Listening or i was to",
+        footerThanksTo: "Thanks to:",
+        footerSiteBy: "Site by:",
+        footerMyFriends: "My friend(s):",
+        footerCodeAndAPIFrom: "code and API from",
         project1: {
             title: "Python Music Player",
             description: `In short, the player is based on Mixer \n Music engine for PyGame games (Yes, it's that weird, but otherwise I couldn't implement some of the features 😉 )`,
